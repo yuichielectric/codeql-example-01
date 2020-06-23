@@ -43,6 +43,9 @@ jobs:
         uses: github/codeql-action/analyze@v1
         continue-on-error: true
 
+      - name: print build-tracer.log
+        run: cat `find $GITHUB_WORKSPACE | grep build-tracer.log`
+
       - name: Upload Artifact
         uses: actions/upload-artifact@v2
         with:
