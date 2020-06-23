@@ -41,3 +41,9 @@ jobs:
 
       - name: Perform CodeQL Analysis
         uses: github/codeql-action/analyze@v1
+
+      - name: Upload Artifact
+        uses: actions/upload-artifact@v2
+        with:
+          name: codeql_databases
+          path: /home/runner/work/sandbox/codeql_databases/cpp/log
