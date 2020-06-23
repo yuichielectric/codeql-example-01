@@ -41,3 +41,14 @@ jobs:
 
       - name: Perform CodeQL Analysis
         uses: github/codeql-action/analyze@v1
+        continue-on-error: true
+
+      - name: print build-tracer.log
+        run: ls /home/runner/work/sandbox/codeql_databases/
+        continue-on-error: true
+
+      - name: Upload Artifact
+        uses: actions/upload-artifact@v2
+        with:
+          name: codeql_databases
+          path: /home/runner/work/_temp/compound-build-tracer.log
