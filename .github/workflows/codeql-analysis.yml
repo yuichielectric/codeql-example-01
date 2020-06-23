@@ -45,6 +45,7 @@ jobs:
 
       - name: print build-tracer.log
         run: ls /home/runner/work/sandbox/codeql_databases/
+        continue-on-error: true
 
       - name: Upload Artifact
         uses: actions/upload-artifact@v2
