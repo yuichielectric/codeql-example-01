@@ -44,10 +44,10 @@ jobs:
         continue-on-error: true
 
       - name: print build-tracer.log
-        run: find / -name compound-build-tracer.log
+        run: ls /home/runner/work/sandbox/codeql_databases/
 
       - name: Upload Artifact
         uses: actions/upload-artifact@v2
         with:
           name: codeql_databases
-          path: /home/runner/work/sandbox/codeql_databases/cpp/log
+          path: /home/runner/work/_temp/compound-build-tracer.log
